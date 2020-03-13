@@ -1,0 +1,53 @@
+{
+  "name": "wmn-major-works",
+  "version": "1.0.0",
+  "description": " West Midlands Network Major works and events template pages",
+  "main": "Gulpfile.js",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "html5-boilerplate": "^7.2.0",
+    "http-server": "^0.12.1",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.1",
+    "sassdoc": "^2.7.1",
+    "testcafe": "^1.6.0"
+  },
+  "scripts": {
+    "build": "gulp",
+    "prestart": "gulp build",
+    "start": "gulp serve",
+    "test": "testcafe chrome,firefox tests/ --app \"http-server ./dist -s\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Skerwe@bitbucket.org/Skerwe/nunjucks-static-site-boilerplate.git"
+  },
+  "keywords": [
+    "static-site",
+    "nunjucks",
+    "gulp",
+    "sass",
+    "test-cafe"
+  ],
+  "author": "Quintin Henn <quintin.henn@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://Skerwe@bitbucket.org/Skerwe/nunjucks-static-site-boilerplate.git#readme",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%",
+    "Firefox ESR"
+  ]
+}

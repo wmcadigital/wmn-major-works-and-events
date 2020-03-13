@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% include "partials/template/head.njk" %}
+<body id="majorWorks" class="wmnds-content-tile--yellow">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  {% include "partials/header.njk" %}
+
+  {% block content %}{% endblock %}
+
+  <script src="js/main.js"></script>
+
+  {% include "partials/footer.njk" %}
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
