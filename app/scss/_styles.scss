@@ -6,7 +6,6 @@
   }
   .wmnds-content-tile {
     background-color: #fff;
-    margin: 0 0 20px 0;
   }
   .results {
     .wmnds-content-tile{
@@ -14,6 +13,33 @@
     &:nth-child(odd) {
       margin-right: 20px;
     }
+    .wmnds-content-tile__copy {
+      @media screen and (max-width: 767px) {
+        img {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
   }
+  }
+  .copy {
+    .wmnds-content-tile{
+      margin-bottom: 20px;
+    }
+    .wmnds-msg-help {
+      span {font-weight: bold;}
+    }
+  }
+  .sidebar {
+    .wmnds-msg-help {
+      span {font-weight: bold;}
+    }
+    .wmnds-content-tile {
+      margin: 0 0 20px 0;
+    }
+    .wmnds-disruption-indicator-large {
+      margin: 0 0 10px 0;
+    }
   }
 }
