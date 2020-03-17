@@ -25,7 +25,7 @@ const path = {
     output: 'dist/js'
   },
   styles: {
-    main: 'app/scss/main.scss',
+    main: 'app/scss/wmn-major-works.scss',
     input: 'app/scss/*.scss',
     output: 'dist/css',
     docs: 'dist/sassdoc'
@@ -70,10 +70,10 @@ function sassDocTask() {
 function scriptTask() {
   return src([
     'app/scripts/plugins.js',
-    'app/scripts/main.js'
+    'app/scripts/wmn-major-works.js'
   ])
     .pipe(concat({
-      path: 'main.js'
+      path: 'wmn-major-works.js'
     }))
     .pipe(uglify())
     .pipe(dest(path.scripts.output))
