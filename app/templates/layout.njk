@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-    {% include "partials/template/head.njk" %}
-    <body id="majorWorks" class="wmnds-content-tile--yellow">
-        {% include "partials/header.njk" %}
-        {% block content %}{% endblock %}
-        {% include "partials/footer.njk" %}
-        <script src="js/wmn-major-works.js"></script>
-        <!-- IE 10+ / Edge support via babel-polyfill: https://babeljs.io/docs/en/babel-polyfill/ -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
-
-        <!-- jPList Library -->
-        <script src="https://cdn.jsdelivr.net/npm/jplist-es6@1.2.0/dist/1.2.0/jplist.min.js"></script>
-        <script>
-            jplist.init();
-        </script>
-    </body>
+<html lang="en-gb" class="wmnds-html">
+  {% include "partials/template/head.njk" %}
+  <body id="majorWorks" class="wmnds-content-tile--yellow">
+    {% include "partials/header.njk" %}
+    {% block content %}{% endblock %}
+    {% include "partials/footer.njk" %}
+    <script src="js/wmn-major-works.js"></script>
+  </body>
 </html>
