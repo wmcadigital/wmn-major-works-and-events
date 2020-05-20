@@ -33,18 +33,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://Skerwe@bitbucket.org/Skerwe/nunjucks-static-site-boilerplate.git"
+    "url": "git+https://github.com/wmcadigital/wmn-major-works-and-events.git"
   },
-  "keywords": [
-    "static-site",
-    "nunjucks",
-    "gulp",
-    "sass",
-    "test-cafe"
-  ],
-  "author": "Quintin Henn <quintin.henn@gmail.com>",
+  "author": "WMCA <designteam@wmca.org.uk>",
   "license": "MIT",
-  "homepage": "https://Skerwe@bitbucket.org/Skerwe/nunjucks-static-site-boilerplate.git#readme",
+  "homepage": "https://github.com/wmcadigital/wmn-major-works-and-events",
   "browserslist": [
     "last 2 versions",
     "> 5%",
