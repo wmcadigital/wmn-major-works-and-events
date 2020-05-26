@@ -1,8 +1,11 @@
+// filter function for area dropdown
 function resultsFilter(elem) {
-  if (elem.value != 0) { // hide the events
+  if (elem.value != 0) {
+      // hide the events
       const events = document.querySelectorAll(".tile");
       for (var i = 0; i < events.length; i++) {
           events[i].style.display = 'none';
+          events[i].classList.remove("result");
       }
       liveResults();
       plannedResults();
@@ -16,6 +19,7 @@ function resultsFilter(elem) {
       // show all events
       for (var e = 0; e < events.length; e++) {
           events[e].style.display = 'block';
+          events[e].classList.remove("result");
       }
       // show no results message if no results
       if (countLive == 0) {
@@ -38,6 +42,7 @@ function liveResults() {
   let myElements = document.querySelectorAll('.live' + value);
   for (let i = 0; i < myElements.length; i++) {
       myElements[i].style.display = 'block';
+      myElements[i].classList.add("result"); // add result class in order to style margin
       countLive = countLive + 1;
   }
   // display no results message
@@ -47,16 +52,16 @@ function liveResults() {
   } else {
       noLiveRes.style.display = 'none';
   }
-
 }
 function plannedResults() {
   const e = document.getElementById("areaSelect");
   let value = e.options[e.selectedIndex].value;
   // unhide planned events
   let countPlanned = 0;
-  let myElementss = document.querySelectorAll('.planned' + value);
-  for (let i = 0; i < myElementss.length; i++) {
-      myElementss[i].style.display = 'block';
+  let plannedEvents = document.querySelectorAll('.planned' + value);
+  for (let i = 0; i < plannedEvents.length; i++) {
+      plannedEvents[i].style.display = 'block';
+      plannedEvents[i].classList.add("result");
       countPlanned = countPlanned + 1;
   }
   // display no results message

@@ -23,22 +23,41 @@ body {
     }
     .noliveresults, .noplannedresults {display: none;}
     .tiles {
+      display: flex;
+      flex-flow: row wrap;
       .tile{
-        padding-bottom: 20px;
+        width: calc( (100% / 2) - 10px );
         &:nth-child(odd) {
-          padding-right: 10px;
-          @media screen and (max-width: 767px) {
-            padding-right: 0px;
+          margin: 0 10px 20px 0;
+          @media (max-width: 568px) {
+            margin: 0 0 10px 0;
           }
         }
         &:nth-child(even) {
-          padding-left: 10px;
-          @media screen and (max-width: 767px) {
-            padding-left: 0px;
+          margin: 0 0 20px 10px;
+          @media (max-width: 568px) {
+            margin: 0 0 10px 0;
           }
+        }
+        @media (max-width: 568px) {
+          width: 100%;
         }
         .content{
           display: contents;
+        }
+      }
+      .result{ // style active filtered tiles
+        &:nth-child(odd) {
+          margin: 0 10px 20px 0;
+          @media (max-width: 568px) {
+            margin: 0 0 10px 0;
+          }
+        }
+        &:nth-child(even) {
+          margin: 0 10px 20px 0px;
+          @media (max-width: 568px) {
+            margin: 0 0 10px 0;
+          }
         }
       }
       .wmnds-content-tile{
