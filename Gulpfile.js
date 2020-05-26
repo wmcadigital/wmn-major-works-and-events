@@ -12,7 +12,7 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
@@ -75,7 +75,7 @@ function scriptTask() {
     .pipe(concat({
       path: 'wmn-major-works.js'
     }))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest(path.scripts.output))
     .pipe(browserSync.stream());
 }
