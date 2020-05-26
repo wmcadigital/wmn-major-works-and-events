@@ -22,11 +22,7 @@ Make sure these are installed first.
 
 ### Quick Start
 
-Clone the repository with the name of your new project:  
-`git clone https://Skerwe@bitbucket.org/Skerwe/nunjucks-static-site-boilerplate.git <project-name>`
-
-1. In bash/terminal/command line, `cd` into your project directory.
-2. Run `npm install` to install required files and dependencies.
+1. Run `npm install` to install required files and dependencies.
 3. When it's done installing, run one of the tasks to get going:
     - `gulp` manually compiles files.
     - `gulp serve` automatically compiles files and applies changes using [BrowserSync](https://browsersync.io/) when you make changes to your source files.
