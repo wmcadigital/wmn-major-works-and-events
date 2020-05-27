@@ -15,11 +15,24 @@ body {
   .main {
     margin: 3 0px 0 0 0;
   }
+  /* Make sure main container displays full width in IE11 */
+  .wmnds-container.wmnds-container--main{
+    display: block;
+  }
   .results {
     .wmnds-fe-dropdown__select {
+      appearance: none;
+      background: #fd0;
       border-radius: 5px;
+      background-repeat: no-repeat;
+      background-position: right 5px center;
+      background-size: 2em 2em;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.8 35.5' style='enable-background:new 0 0 34.8 35.5;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%233C1053;%7D%0A%3C/style%3E%3Cpath class='st0' d='M29,6.5H5.5c-1.1,0-1.6,1.3-0.9,2l9.4,9v10.1c0,0.4,0.2,0.7,0.5,1l4,2.7c0.8,0.5,1.9,0,1.9-1V17.5l9.4-9 C30.6,7.7,30,6.5,29,6.5z'/%3E%3C/svg%3E");
       font-weight: bold;
-      background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.8 35.5' style='enable-background:new 0 0 34.8 35.5;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%233C1053;%7D%0A%3C/style%3E%3Cpath class='st0' d='M29,6.5H5.5c-1.1,0-1.6,1.3-0.9,2l9.4,9v10.1c0,0.4,0.2,0.7,0.5,1l4,2.7c0.8,0.5,1.9,0,1.9-1V17.5l9.4-9 C30.6,7.7,30,6.5,29,6.5z'/%3E%3C/svg%3E") right no-repeat #fd0;
+    }
+    /* hide dropdown in IE11 */
+    .wmnds-fe-dropdown__select::-ms-expand {
+      display: none;
     }
     .noliveresults, .noplannedresults {display: none;}
     .tiles {
@@ -45,6 +58,14 @@ body {
         .content{
           display: contents;
         }
+        /* IE styles */
+        @media all and (-ms-high-contrast:none)
+        {
+          .content{
+            display: block;
+            height: 100%;
+          }
+        }
       }
       .result{ // style active filtered tiles
         &:nth-child(odd) {
@@ -64,6 +85,12 @@ body {
         position: relative;
       }
     }
+    /* IE styles */
+    @media all and (-ms-high-contrast:none)
+    {
+      .tiles { max-width: 795px }
+
+   }
     .wmnds-content-tile{
       margin-bottom: 20px;
 
