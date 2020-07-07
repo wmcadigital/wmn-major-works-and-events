@@ -72,3 +72,22 @@ function plannedResults() {
       noPlannedRes.style.display = 'none';
   }
 }
+// show no results if 0 on page load
+document.addEventListener("DOMContentLoaded",function(){
+  let countLive = document.querySelectorAll('.liveResults .tile').length;
+  let countPlanned = document.querySelectorAll('.plannedResults .tile').length;
+  // show live no results message
+  const noLiveRes = document.querySelector(".noliveresults");
+  if (countLive == 0) {
+      noLiveRes.style.display = 'block';
+  } else {
+      noLiveRes.style.display = 'none';
+  }
+  // show planned no results message
+  const noPlannedRes = document.querySelector(".noplannedresults");
+  if (countPlanned == 0) {
+      noPlannedRes.style.display = 'block';
+  } else {
+      noPlannedRes.style.display = 'none';
+  }
+});
